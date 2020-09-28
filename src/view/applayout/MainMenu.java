@@ -28,6 +28,29 @@ public class MainMenu extends JMenuBar {
 	private JMenuItem jmiEdit;
 	private JMenuItem jmiRemove;
 
+	private JMenu jmVisitor;
+	private JMenuItem jmiVisitorGetPermit;
+	private JMenuItem jmiVisitorPayCitation;
+	private JMenuItem jmiVisitorExitLot;
+
+	private JMenu jmUniversityUser;
+
+	private JMenu jmAdministrator;
+	private JMenuItem jmiAdminAddLot;
+	private JMenuItem jmiAdminAssignZone;
+	private JMenuItem jmiAdminAssignType2Space;
+	private JMenuItem jmiAdminAssignPermit;
+	private JMenuItem jmiAdminCheckValidVisitorParking;
+	private JMenuItem jmiAdminCheckInvalidVisitorParking;
+
+
+	
+	private JMenu jmReport;
+	private JMenuItem jmReportListOfZone;
+	private JMenuItem jmReportGetPermitInformation;
+	private JMenuItem jmReportGetVehicleInformation;
+
+
 	private JMenu jmHelp;
 	private JMenuItem jmiAbout;
 	
@@ -43,6 +66,57 @@ public class MainMenu extends JMenuBar {
 
 	private void configure() {
 		jmFile = createMenu("File", 'F');
+
+		jmReport = createMenu("Report", 'R');
+
+		jmReportListOfZone = createMenuItem(jmReport, "List of zones", 'V', "configs", 
+				KeyStroke.getKeyStroke(KeyEvent.VK_F, InputEvent.ALT_MASK));
+
+		jmReportGetPermitInformation = createMenuItem(jmReport, "Permit information", 'P', "configs", 
+				KeyStroke.getKeyStroke(KeyEvent.VK_F1, InputEvent.ALT_MASK));
+
+		jmReportGetVehicleInformation = createMenuItem(jmReport, "Vehicle information", 'I', "configs", 
+				KeyStroke.getKeyStroke(KeyEvent.VK_F2, InputEvent.ALT_MASK));
+
+		
+		jmAdministrator = createMenu("Administrator", 'M');
+
+		jmiAdminAddLot = createMenuItem(jmAdministrator, "Add lot", 'L', "configs", 
+		KeyStroke.getKeyStroke(KeyEvent.VK_2, InputEvent.ALT_MASK));
+
+		jmiAdminAssignZone = createMenuItem(jmAdministrator, "Assign zone", 'Z', "configs", 
+		KeyStroke.getKeyStroke(KeyEvent.VK_3, InputEvent.ALT_MASK));
+
+		jmiAdminAssignType2Space = createMenuItem(jmAdministrator, "Assign type to space", 'T', "configs", 
+		KeyStroke.getKeyStroke(KeyEvent.VK_4, InputEvent.ALT_MASK));
+
+		jmiAdminAssignPermit = createMenuItem(jmAdministrator, "Assign permit", 'Q', "configs", 
+		KeyStroke.getKeyStroke(KeyEvent.VK_5, InputEvent.ALT_MASK));
+
+		jmiAdminCheckValidVisitorParking = createMenuItem(jmAdministrator, "Check valid visitor parking", 'Z', "configs", 
+		KeyStroke.getKeyStroke(KeyEvent.VK_6, InputEvent.ALT_MASK));
+
+		jmiAdminCheckInvalidVisitorParking = createMenuItem(jmAdministrator, "Check invalid visitor parking", 'Z', "configs", 
+		KeyStroke.getKeyStroke(KeyEvent.VK_7, InputEvent.ALT_MASK));
+
+		
+		jmVisitor = createMenu("Visitor", 'V');
+
+		jmiVisitorGetPermit = createMenuItem(jmVisitor, "Get visitor permit", 'V', "configs", 
+				KeyStroke.getKeyStroke(KeyEvent.VK_0, InputEvent.ALT_MASK));
+
+		jmiVisitorPayCitation = createMenuItem(jmVisitor, "Pay citation", 'C', "configs", 
+				KeyStroke.getKeyStroke(KeyEvent.VK_1, InputEvent.ALT_MASK));
+
+		jmiVisitorExitLot = createMenuItem(jmVisitor, "Exit lot", 'E', "configs", 
+				KeyStroke.getKeyStroke(KeyEvent.VK_9, InputEvent.ALT_MASK));
+		
+
+			
+
+		jmUniversityUser = createMenu("University User", 'U');
+
+	
 		
 		jmEdit = createMenu("Edit", 'E');
 		

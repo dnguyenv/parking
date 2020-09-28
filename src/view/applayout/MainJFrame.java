@@ -12,7 +12,7 @@ import view.users.JTableList;
 
 public class MainJFrame extends JFrame {
 
-	public static final Dimension PREFERREDSIZE = new Dimension(500,300);
+	public static final Dimension PREFERREDSIZE = new Dimension(1000,600);
 	
 	private static final long serialVersionUID = 1L;
 	
