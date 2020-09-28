@@ -99,6 +99,7 @@ public class UserForm extends JDialog{
 	private void cmdSave(){
 		try {
 			User user = new User( jtfLogin.getText(),jtfName.getText(),jtfRole.getText());
+			JOptionPane.showMessageDialog(this, jtfLogin.getText() + " " + jtfName.getText() + " " + jtfRole.getText(), "", JOptionPane.INFORMATION_MESSAGE);
 			UserController.getInstance().save(user);
 			JOptionPane.showMessageDialog(this, "User saved successfully", "", JOptionPane.INFORMATION_MESSAGE);
 			dispose();
@@ -121,7 +122,7 @@ public class UserForm extends JDialog{
 	@Override
 	public void dispose(){
 		super.dispose();
-		clearForm(jtfName, jtfLogin);
+		clearForm(jtfLogin, jtfName, jtfRole);
 	}
 	
 	public static void toggle(){

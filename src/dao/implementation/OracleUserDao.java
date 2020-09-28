@@ -18,7 +18,7 @@ import daoFactory.DaoFactory;
 public class OracleUserDao implements UserDao {
 
 	private static final String
-	INSERT = "INSERT INTO users (name, login, role) VALUES (?, ?, ?)";
+	INSERT = "INSERT INTO users (login, name, role) VALUES (?, ?, ?)";
 
 	private static final String
 	ALL = "SELECT * FROM users";

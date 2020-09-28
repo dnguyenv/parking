@@ -59,9 +59,9 @@ public class User {
 	
 	@Override
 	public String toString() {
-		return  " Login: " + login + 
-			 	" Name: "  + name +
-				" Role: " + role;				
+		return  " Login: " + this.login + 
+			 	" Name: "  + this.name +
+				" Role: " + this.role;				
 	}
 	
 
